@@ -86,12 +86,12 @@ trait ServiceCapabilities
      * @param Resource $resource
      * @return bool
      */
-    public function update($id, Resource $resource)
+    public function replace($id, Resource $resource)
     {
         $this->validateId($id);
 
         $uri = $this->getResourcePath() . '/' . $id;
-        $this->httpAdapter->patch($uri, $resource->toArray());
+        $this->httpAdapter->put($uri, $resource->toArray());
         return true;
     }
 
@@ -102,13 +102,13 @@ trait ServiceCapabilities
      * @param Resource $resource
      * @return bool
      */
-    public function replace($id, $attribute, Resource $resource)
+    public function update($id, $attribute, Resource $resource)
     {
         $this->validateId($id);
 
         $uri = $this->getResourcePath() . '/' . $id;
         $getter = 'get' . ucfirst($attribute);
-        $this->httpAdapter->put($uri, [
+        $this->httpAdapter->patch($uri, [
             $attribute => $resource->$getter()
         ]);
         return true;

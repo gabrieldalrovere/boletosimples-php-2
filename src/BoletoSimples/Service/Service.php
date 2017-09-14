@@ -33,11 +33,12 @@ interface Service
 
 
     /**
-     * @param int   $id
-     * @param Resource $data
-     * @return mixed
+     * @param int      $id
+     * @param string   $attribute
+     * @param Resource $resource
+     * @return bool
      */
-    public function update($id, Resource $data);
+    public function update($id, $attribute, Resource $resource);
 
 
     /**
