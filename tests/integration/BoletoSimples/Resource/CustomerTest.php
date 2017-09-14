@@ -5,8 +5,8 @@ namespace BoletoSimples\Tests\Integration;
 use PHPUnit\Framework\TestCase;
 
 use BoletoSimples\Entity\Customer as Entity;
-use BoletoSimples\Service\HttpRequester;
-use BoletoSimples\Service\Api\Customer as Service;
+use BoletoSimples\Http\HttpRequester;
+use BoletoSimples\Http\Api\Customer as Service;
 
 final class CustomerTest extends TestCase
 {
