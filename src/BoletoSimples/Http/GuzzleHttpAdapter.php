@@ -3,19 +3,10 @@
 namespace BoletoSimples\Http;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Psr7\Request;
 
-//use BoletoSimples\Configuration;
-//use BoletoSimples\Http\HttpClient2;
 
 final class GuzzleHttpAdapter implements HttpAdapter
 {
-    /**
-     * @var GuzzleHttpAdapter
-     */
-    private static $instance;
-
-
     /**
      * @var Client
      */

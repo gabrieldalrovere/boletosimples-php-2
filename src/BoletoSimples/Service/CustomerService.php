@@ -9,5 +9,5 @@ final class CustomerService implements Service
     /**
      * Resource PATH
      */
-    const URI = 'customers';
+    const URI = 'customer';
 }
